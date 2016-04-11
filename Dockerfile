@@ -1,4 +1,4 @@
-FROM skegio/base
+FROM skegio/base:14.04
 
 RUN apt-get update && apt-get install openjdk-7-jre-headless -y
 RUN curl -fsSL https://raw.githubusercontent.com/technomancy/leiningen/stable/bin/lein > \
