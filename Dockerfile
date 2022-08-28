@@ -11,8 +11,9 @@ RUN curl -fsSL https://github.com/boot-clj/boot-bin/releases/download/latest/boo
             chmod 0755 /usr/local/bin/boot
 
 # install clj/clojure
-RUN wget https://download.clojure.org/install/linux-install-1.10.1.727.sh -O linux-install-1.10.1.727.sh && \
-    chmod +x linux-install-1.10.1.727.sh && \
-    ./linux-install-1.10.1.727.sh
+ENV CLOJURE_VERSION=1.11.1.1155
+RUN wget https://download.clojure.org/install/linux-install-$CLOJURE_VERSION.sh -O linux-install.sh && \
+    chmod +x linux-install.sh && \
+    ./linux-install.sh
 
 RUN apt-get install rlwrap -y
