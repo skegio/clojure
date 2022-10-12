@@ -11,7 +11,7 @@ RUN curl -fsSL https://github.com/boot-clj/boot-bin/releases/download/latest/boo
             chmod 0755 /usr/local/bin/boot
 
 # install clj/clojure
-ENV CLOJURE_VERSION=1.11.1.1155
+ENV CLOJURE_VERSION=1.11.1.1165
 RUN wget https://download.clojure.org/install/linux-install-$CLOJURE_VERSION.sh -O linux-install.sh && \
     chmod +x linux-install.sh && \
     ./linux-install.sh
